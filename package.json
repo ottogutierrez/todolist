@@ -1,0 +1,19 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Todolist app (2nd app)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ottogutierrez/todolist.git"
+  },
+  "author": "Otto Gutierrez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ottogutierrez/todolist/issues"
+  },
+  "homepage": "https://github.com/ottogutierrez/todolist#readme"
+}
