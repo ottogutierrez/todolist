@@ -6,18 +6,19 @@ The purpose of this app is to keep learning about Express and Socket.io, and als
 
 STEPS FOR CREATING THE APP
 
-* [ ] BASIC SERVER FUNCTIONALITY
-  * [ ] Create server
-  * [ ] Create a public folder (future functionality)
+* [X] ~~*1. BASIC SERVER FUNCTIONALITY*~~ [2019-04-28]
+  * [X] ~~*Create server*~~ [2019-04-28]
+  * [X] ~~*Create a public folder (future functionality)*~~ [2019-04-28]
 
-* [ ] FRONT-END FUNCTIONALITY
+* [ ] 2. FRONT-END FUNCTIONALITY
   * [ ] Basic list to show tasks
   * [ ] Add ability to delete tasks
   * [ ] Add ability to create tasks
   * [ ] Add ability to complete tasks
   * [ ] Hide completed tasks (toggle)
 
-* [ ] SERVER SETUP (SOCKET AND DATABASE)
+* [ ] 3. SERVER SETUP (SOCKET AND DATABASE)
+  * [ ] Setup route for single page application (Dev vs Production - public path)
   * [ ] Setup socket communication
   * [ ] Setup mongoDB database
   * [ ] Setup mongoDB driver
