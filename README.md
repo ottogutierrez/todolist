@@ -11,11 +11,12 @@ STEPS FOR CREATING THE APP
   * [X] ~~*Create a public folder (future functionality)*~~ [2019-04-28]
 
 * [ ] 2. FRONT-END FUNCTIONALITY
-  * [ ] Basic list to show tasks
-  * [ ] Add ability to delete tasks
-  * [ ] Add ability to create tasks
-  * [ ] Add ability to complete tasks
-  * [ ] Hide completed tasks (toggle)
+  * [X] ~~*Basic list to show tasks*~~ [2019-04-30]
+  * [X] ~~*Add ability to delete tasks*~~ [2019-05-04]
+  * [X] ~~*Add ability to create tasks*~~ [2019-04-30]
+  * [X] ~~*Add ability to complete tasks*~~ [2019-05-01]
+
+
 
 * [ ] 3. SERVER SETUP (SOCKET AND DATABASE)
   * [ ] Setup route for single page application (Dev vs Production - public path)
@@ -27,3 +28,7 @@ STEPS FOR CREATING THE APP
     * [ ] Update
     * [ ] Delete
     * [ ] Add
+
+* [ ] 4. Advanced Tasks objects
+  * [ ] Work on a more complete task object
+  * [ ] Hide completed tasks (toggle)
