@@ -4,7 +4,8 @@
   "description": "Todolist app (2nd app)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server/index.js",
+    "dev": "nodemon ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/ottogutierrez/todolist/issues"
   },
-  "homepage": "https://github.com/ottogutierrez/todolist#readme"
+  "homepage": "https://github.com/ottogutierrez/todolist#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "monk": "^6.0.6",
+    "path": "^0.12.7",
+    "socket.io": "^2.2.0",
+    "volleyball": "^1.5.1"
+  }
 }

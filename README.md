@@ -6,23 +6,32 @@ The purpose of this app is to keep learning about Express and Socket.io, and als
 
 STEPS FOR CREATING THE APP
 
-* [ ] BASIC SERVER FUNCTIONALITY
-  * [ ] Create server
-  * [ ] Create a public folder (future functionality)
+* [X] ~~*1. BASIC SERVER FUNCTIONALITY*~~ [2019-04-28]
+  * [X] ~~*Create server*~~ [2019-04-28]
+  * [X] ~~*Create a public folder (future functionality)*~~ [2019-04-28]
 
-* [ ] FRONT-END FUNCTIONALITY
-  * [ ] Basic list to show tasks
-  * [ ] Add ability to delete tasks
-  * [ ] Add ability to create tasks
-  * [ ] Add ability to complete tasks
-  * [ ] Hide completed tasks (toggle)
+* [ ] 2. FRONT-END FUNCTIONALITY
+  * [X] ~~*Basic list to show tasks*~~ [2019-04-30]
+  * [X] ~~*Add ability to delete tasks*~~ [2019-05-04]
+  * [X] ~~*Add ability to create tasks*~~ [2019-04-30]
+  * [X] ~~*Add ability to complete tasks*~~ [2019-05-01]
 
-* [ ] SERVER SETUP (SOCKET AND DATABASE)
-  * [ ] Setup socket communication
-  * [ ] Setup mongoDB database
-  * [ ] Setup mongoDB driver
+
+
+* [ ] 3. SERVER SETUP (SOCKET AND DATABASE)
+  * [X] ~~*Setup route for single page application (Dev vs Production - public path)*~~ [2019-05-05]
+  * [X] ~~*Setup socket communication*~~ [2019-05-06]
+  * [X] ~~*Setup mongoDB database*~~ [2019-05-09]
+  * [X] ~~*Setup mongoDB driver*~~ [2019-05-09]
   * [ ] Methods to Create, Update, Delete, Add
-    * [ ] Create
-    * [ ] Update
-    * [ ] Delete
-    * [ ] Add
+    * [X] ~~*Create*~~ [2019-05-09]
+    * [X] ~~*Update*~~ [2019-05-09]
+    * [X] ~~*Delete*~~ [2019-05-09]
+    * [X] ~~*Hide completed tasks (toggle)*~~ [2019-05-09]
+  * [X] ~~*Make sure proxy is configure properly (https://cli.vuejs.org/config/#devserver-proxy)*~~ [2019-05-16]
+
+
+* [ ] 4. Advanced Tasks objects
+  * [ ] Show complete tasks button
+  * [ ] Work on a more complete task object
+
