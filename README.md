@@ -19,16 +19,19 @@ STEPS FOR CREATING THE APP
 
 
 * [ ] 3. SERVER SETUP (SOCKET AND DATABASE)
-  * [ ] Setup route for single page application (Dev vs Production - public path)
-  * [ ] Setup socket communication
-  * [ ] Setup mongoDB database
-  * [ ] Setup mongoDB driver
+  * [X] ~~*Setup route for single page application (Dev vs Production - public path)*~~ [2019-05-05]
+  * [X] ~~*Setup socket communication*~~ [2019-05-06]
+  * [X] ~~*Setup mongoDB database*~~ [2019-05-09]
+  * [X] ~~*Setup mongoDB driver*~~ [2019-05-09]
   * [ ] Methods to Create, Update, Delete, Add
-    * [ ] Create
-    * [ ] Update
-    * [ ] Delete
-    * [ ] Add
+    * [X] ~~*Create*~~ [2019-05-09]
+    * [X] ~~*Update*~~ [2019-05-09]
+    * [X] ~~*Delete*~~ [2019-05-09]
+    * [X] ~~*Hide completed tasks (toggle)*~~ [2019-05-09]
+  * [X] ~~*Make sure proxy is configure properly (https://cli.vuejs.org/config/#devserver-proxy)*~~ [2019-05-16]
+
 
 * [ ] 4. Advanced Tasks objects
+  * [ ] Show complete tasks button
   * [ ] Work on a more complete task object
-  * [ ] Hide completed tasks (toggle)
+

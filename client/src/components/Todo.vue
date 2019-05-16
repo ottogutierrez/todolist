@@ -1,10 +1,7 @@
 <template>
   <div class="todo-container mb-1">
-    <!-- <img class="check" v-if="done" v-on:click="toggle" src="../assets/done.png" alt="test">
-    <img  class="check" v-if="!done" v-on:click="toggle" src="../assets/not-done.png" alt="test"> -->
-    
     <div class="task-row row my-2">
-      <div class="checked col-1" v-if="done" v-on:click="toggle">
+      <div class="checked col-1" v-if="localDone" v-on:click="toggle">
         <svg width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
           <desc>Created with Sketch.</desc>
@@ -29,7 +26,7 @@
           </g>
         </svg>
       </div>
-      <div class="unchecked col-1" v-if="!done" v-on:click="toggle">
+      <div class="unchecked col-1" v-if="!localDone" v-on:click="toggle">
         <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
             <desc>Created with Sketch.</desc>
@@ -54,9 +51,9 @@
         </svg>        
       </div>
       <div class="msg col-10 px-0">
-        <span class="task-content" v-bind:class="{ taskDone: done }">{{ task.text }} </span>
+        <span class="task-content" v-bind:class="{ taskDone: localDone }">{{ task.text }} </span>
       </div>
-      <div class="delete col-1 my-0 py-0" v-on:click="$emit('deleteTask',task.id)">
+      <div class="delete col-1 my-0 py-0" v-on:click="$emit('deleteTask',task._id)">
         <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
             <desc>Created with Sketch.</desc>
@@ -77,14 +74,19 @@ export default {
   props:{
     task: Object
   },
-  data: function(){
+  data:function(){
     return {
-      done: false,
+      localDone: this.task.done
     }
   },
   methods: {
     toggle: function(){
-      this.done = !this.done
+      this.localDone = !this.localDone
+      setTimeout(()=>{
+        // Give a nice user experience, instead of todo just disappearing
+        this.task.done = !this.task.done
+        this.$parent.updateTask(this.task)
+      },2000)
     }
   },
 }
@@ -95,6 +97,7 @@ export default {
   background-color: #F7F7F9;
   text-align: left;
   border-radius: 2px;
+  min-width: 400px;
 }
 
 img.check{

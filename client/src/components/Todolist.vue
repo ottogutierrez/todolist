@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container pt-5">
     <div class="row justify-content-center">
       <div class="input-group col-9 px-0">
         <input type="text" v-model="newTaskText" 
@@ -16,18 +16,20 @@
       </div>
     </div>
     <hr class="col-9">
-    <!-- Todo list here -->
-
     <div class="row justify-content-center"
-    v-for="task in tasks" v-bind:key="task.id">
-      <Todo class="col-9" :task="task" v-on:deleteTask="deleteTask"/>
+    v-for="task in tasks" v-bind:key="task._id">
+      <Todo class="col-9" :task="task" v-on:deleteTask="deleteTask" v-if="!task.done"/>
     </div>
+    <hr class="col-9">
+
+    
     
 </div>
 </template>
 
 <script>
 import Todo from './Todo.vue'
+import io from 'socket.io-client'
 
 export default {
   name: 'app',
@@ -38,31 +40,36 @@ export default {
     return {
       newTaskText: '',
       tasks: [],
-      idCounter: 0,
+      socket: io()
     }
   },
   methods: {
     addTask: function(){
-      // When implementing a database, this will change
       if (this.newTask=='') {return}
-      var newTask = {
-        id: this.idCounter,
-        text: this.newTaskText
+      var tempNewTask = {
+        text: this.newTaskText,
+        done: false
       } 
-      this.tasks.push(newTask)
+      // TODO a way to simplify this?
       this.newTaskText = ''
-      this.idCounter += 1
+      this.socket.emit('NEW_TASK', tempNewTask)
     },
     deleteTask: function(id) {
-      // This will change when implementing a database
-      this.tasks.forEach((element,index) => {
-        if (index === id) {
-          // delete the element
-          this.tasks.splice(id,1)
-        }
-        
-      });
+      this.socket.emit('DELETE_TASK', id)
+    },
+    updateTask: function(task) {
+      this.socket.emit('UPDATE_TASK', task)
+    },
+    refreshTasks: function(){
+      this.socket.emit('GET_TASKS')
+      this.socket.on('TASKS',(tasksList)=>{
+        this.tasks = tasksList
+
+      })
     }
+  },
+  mounted:function() {
+    this.refreshTasks()
   },
 }
 </script>
