@@ -11,7 +11,7 @@
         <div class="input-group-append">
           <button v-on:click="addTask" 
             class="btn btn-outline-secondary" 
-            type="button" id="button-addon2">Button</button>
+            type="button" id="button-addon2">Add task</button>
         </div>
       </div>
     </div>
